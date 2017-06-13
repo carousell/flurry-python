@@ -4,7 +4,7 @@ from .utils import validate_datetime
 from .flurry import Flurry_api, tables
 
 
-def interface(generate_code_only=False):
+def interface(flurry_token, generate_code_only=False):
     os.system("clear")
     start, start_datetype = validate_datetime(raw_input("Format for Day, Week: YYYY-MM-DD\nFormat for Month    : YYYY-MM\nFormat for Hour     : YYYY-MM-DDTHH\n\nPlease enter start date:\n> "))
     print
@@ -82,7 +82,7 @@ def interface(generate_code_only=False):
     """.format(start, end, table, time_grain, dimensions, metrics, country_codes)
 
     if not generate_code_only:
-        flurry = Flurry_api(start, end)
+        flurry = Flurry_api(start, end, flurry_token)
         results = flurry.get_app_metric(table, time_grain, dimensions, metrics, filter_countries=country_codes)
         return results
 

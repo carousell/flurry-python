@@ -1,4 +1,3 @@
-import os
 import time
 import requests
 try:
@@ -9,7 +8,6 @@ except:     # For Python 3
 from .utils import stringify_list
 
 
-flurry_token = os.environ["FLURRY_TOKEN"]
 tables = {
     "appUsage": {
         "time_grain": ['day', 'week', 'month', 'all'],
@@ -30,7 +28,7 @@ tables = {
 
 
 class Flurry_api(object):
-    def __init__(self, start, end):
+    def __init__(self, start, end, flurry_token):
         """
         Format for Day, Week: YYYY-MM-DD
         Format for Month    : YYYY-MM
