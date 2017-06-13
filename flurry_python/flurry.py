@@ -4,10 +4,8 @@ from utils import stringify_list
 import requests
 try:
     import urlparse
-    from urllib import urlencode
 except:     # For Python 3
     import urllib.parse as urlparse
-    from urllib.parse import urlencode
 
 flurry_token = os.environ["FLURRY_TOKEN"]
 tables = {

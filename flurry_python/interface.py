@@ -8,13 +8,13 @@ def interface(generate_code_only=False):
     os.system("clear")
     start, start_datetype = validate_datetime(raw_input("Format for Day, Week: YYYY-MM-DD\nFormat for Month    : YYYY-MM\nFormat for Hour     : YYYY-MM-DDTHH\n\nPlease enter start date:\n> "))
     print
-    while start_datetype == None:
+    while start_datetype is None:
         start, start_datetype = validate_datetime(raw_input("Format for Day, Week: YYYY-MM-DD\nFormat for Month    : YYYY-MM\nFormat for Hour     : YYYY-MM-DDTHH\n\nPlease enter start date:\n> "))
         print
 
     end, end_datetype = validate_datetime(raw_input("Please enter end date:\n> "))
     print
-    while end_datetype == None:
+    while end_datetype is None:
         end, end_datetype = validate_datetime(raw_input("Please enter end date:\n> "))
         print
 
