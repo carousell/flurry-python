@@ -5,7 +5,7 @@ try:
 except:     # For Python 3
     import urllib.parse as urlparse
 
-from .utils import stringify_list
+from flurry.utils import stringify_list
 
 
 tables = {
@@ -53,8 +53,8 @@ class Flurry_api(object):
         choice_tables = tables.keys()
         if table not in choice_tables:
             str_choice_tables = stringify_list(choice_tables)
-            print """{0} is not a valid table.\n\nPlease choose 1 or more of the following:\n{1}
-            """.format(table, str_choice_tables)
+            print("""{0} is not a valid table.\n\nPlease choose 1 or more of the following:\n{1}
+            """).format(table, str_choice_tables)
         else:
             choice_time_grain = tables[table]["time_grain"]
             choice_dimensions = tables[table]["dimensions"]

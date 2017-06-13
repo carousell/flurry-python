@@ -1,5 +1,5 @@
 flurry/__init__.py
-flurry/flurry.py
+flurry/flurry_api.py
 flurry/interface.py
 flurry/utils.py
 flurry.egg-info/PKG-INFO
@@ -7,3 +7,4 @@ flurry.egg-info/SOURCES.txt
 flurry.egg-info/dependency_links.txt
 flurry.egg-info/not-zip-safe
 flurry.egg-info/top_level.txt
+flurry/utils/__init__.py
