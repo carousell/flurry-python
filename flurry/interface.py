@@ -1,7 +1,7 @@
 import os
 
-from flurry import Flurry_api, tables
-from utils import validate_datetime
+from .utils import validate_datetime
+from .flurry import Flurry_api, tables
 
 
 def interface(generate_code_only=False):

@@ -3,7 +3,7 @@ import re
 from setuptools import setup, find_packages
 
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 egg = re.compile("\#egg\=(.*?)$")
@@ -19,7 +19,7 @@ REQUIREMENTS.extend(
 
 
 setup(
-    name='flurry_python',
+    name='flurry',
     version=__version__,
     zip_safe=False,
     packages=find_packages(exclude=["test*"]),

@@ -5,6 +5,7 @@ def stringify_list(list):
     str_list = str(list).replace("[", "").replace("]", "").replace("'", "")
     return str_list
 
+
 def validate_datetime(date_text):
     try:
         datetime.strptime(date_text, '%Y-%m-%dT%H')

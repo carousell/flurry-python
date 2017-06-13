@@ -1,11 +1,13 @@
 import os
 import time
-from utils import stringify_list
 import requests
 try:
     import urlparse
 except:     # For Python 3
     import urllib.parse as urlparse
+
+from .utils import stringify_list
+
 
 flurry_token = os.environ["FLURRY_TOKEN"]
 tables = {
